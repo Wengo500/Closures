@@ -12,6 +12,7 @@ const counter = (value = 0) => {
     return {
         inc: () => value++,
         dec: () => value--,
+        value: () => value,
     };
 };
 const iterator = counter();
@@ -20,4 +21,4 @@ iterator.inc() // увеличивает значение на 1
 iterator.inc() // еще на 1
 iterator.dec() // уменьшает на 1
 
-console.log(iterator.dec()); // выводит 1
+console.log(iterator.value()); // выводит 1
